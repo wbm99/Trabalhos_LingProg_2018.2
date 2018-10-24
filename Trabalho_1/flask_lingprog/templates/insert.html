@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UFRJ - Lista de pessoas e alunos</title>
+    <link href="{{ url_for('static', filename='bulma.css') }}" rel="stylesheet">
+  </head>
+  <body>
+
+    <section class="hero is-bold is-info is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="logotitle"> <br>
+            <h1 class="title">
+              Lista de Alunos e Pessoas
+            </h1>
+            <h2 class="subtitle">
+              Trabalho desenvolvido para a disciplina de Linguagens de Programação <br>
+              Escola Politécnica - Universidade Federal do Rio de Janeiro <br>
+            </h2>
+          </div>
+
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="/">
+                Home
+              </a>
+              <a class="navbar-item is-active" href="insert">
+                Inserir Pessoa/Aluno
+              </a>
+              <a class="navbar-item" href="remove">
+                Remover Pessoa/Aluno
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          Cadastro de Pessoa
+        </h1>
+          <form class="" action="in1" method="post">
+            <input class="input is-large" name="name1" type="text" placeholder="NOME">
+            <input class="input is-large" name="age1" type="text" placeholder="IDADE">
+            <input class="input is-large" name="rg1" type="text" placeholder="RG">
+            <input class="input is-large" name="phone1" type="tel" placeholder="TELEFONE">
+            <div class="control">
+              <button class="button is-danger">Enviar dados</button>
+            </div>
+          </form>
+
+        <br><br><br>
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Cadastro de Aluno
+          </h1>
+          <form class="" action="in2" method="post">
+            <input class="input is-large" name="name2" type="text" placeholder="NOME">
+            <input class="input is-large" name="age2" type="text" placeholder="IDADE">
+            <input class="input is-large" name="rg2" type="text" placeholder="RG">
+            <input class="input is-large" name="phone2" type="tel" placeholder="TELEFONE">
+            <input class="input is-large" name="dre" type="tel" placeholder="DRE">
+            <input class="input is-large" name="code" type="text" placeholder="CÓDIGO DA DISCIPLINA">
+            <input class="input is-large" name="p1" type="text" placeholder="P1 (ex: 7.5)">
+            <input class="input is-large" name="p2" type="text" placeholder="P2 (ex: 7.5)">
+            <div class="control">
+              <button class="button is-danger">Enviar dados</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+      <nav class="tabs">
+        <div class="container">
+          <h4>Desenvolvido por William Barbosa de Macedo - DRE 113090099</h4>
+          <h4>Engenharia Eletrônica e de Computação - POLI/UFRJ</h4>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  </body>
+</html>

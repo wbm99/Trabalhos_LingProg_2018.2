@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UFRJ - Lista de pessoas e alunos</title>
+    <link href="{{ url_for('static', filename='bulma.css') }}" rel="stylesheet">
+  </head>
+  <body>
+
+    <section class="hero is-bold is-primary  is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="logotitle"> <br>
+            <h1 class="title">
+              Lista de Alunos e Pessoas
+            </h1>
+            <h2 class="subtitle">
+              Trabalho desenvolvido para a disciplina de Linguagens de Programação <br>
+              Escola Politécnica - Universidade Federal do Rio de Janeiro <br>
+            </h2>
+          </div>
+
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                Home
+              </a>
+              <a class="navbar-item" href="insert">
+                Inserir Pessoa/Aluno
+              </a>
+              <a class="navbar-item" href="remove">
+                Remover Pessoa/Aluno
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Pessoas na lista atual:
+        </h1>
+        <h2 class="">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>RG</th>
+                <th>Telefone</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for PERSON in person_array %}
+              <tr>
+                <td> {{ PERSON['name'] }} </td>
+                <td>{{PERSON['age']}}</td>
+                <td> {{ PERSON['rg'] }} </td>
+                <td>{{PERSON['phone']}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table><br>
+        </h2>
+        <h1 class="title">
+          Alunos na lista atual:
+        </h1>
+        <h2 class="">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>RG</th>
+                <th>Telefone</th>
+                <th>DRE</th>
+                <th>Código da Disciplina</th>
+                <th>Nota da P1</th>
+                <th>Nota da P2</th>
+                <th>Média Final</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for STUDENT in student_array %}
+              <tr>
+                <td> {{ STUDENT['name'] }} </td>
+                <td>{{STUDENT['age']}}</td>
+                <td> {{ STUDENT['rg'] }} </td>
+                <td>{{STUDENT['phone']}}</td>
+                <td> {{ STUDENT['dre'] }} </td>
+                <td>{{STUDENT['code']}}</td>
+                <td> {{ STUDENT['p1'] }} </td>
+                <td>{{STUDENT['p2']}}</td>
+                <td> {{ STUDENT['mf'] }} </td>
+                <td>{{STUDENT['sit']}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </h2>
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+      <nav class="tabs">
+        <div class="container">
+          <h4>Desenvolvido por William Barbosa de Macedo - DRE 113090099</h4>
+          <h4>Engenharia Eletrônica e de Computação - POLI/UFRJ</h4>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  </body>
+</html>
